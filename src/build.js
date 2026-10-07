@@ -1,5 +1,5 @@
 /*
- * Сборка сайта: src/ → docs/index.html
+ * Сборка сайта: src/ → index.html (в корне репозитория — его раздаёт GitHub Pages)
  *
  *  1. Склеивает три файла из src/content/.
  *  2. Рендерит все формулы ($…$ и $$…$$) через KaTeX прямо при сборке —
@@ -73,7 +73,7 @@ const html = `<!doctype html>
 <meta property="og:title" content="АТ №1 · Аналитическая геометрия">
 <meta property="og:description" content="${DESC}">
 <meta property="og:url" content="${SITE}">
-<meta property="og:image" content="${SITE}preview.png">
+<meta property="og:image" content="${SITE}assets/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${favicon}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +101,5 @@ ${read('runtime.js')}
 </body>
 </html>
 `;
-const outDir = path.join(ROOT, 'docs');
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'index.html'), html);
-console.log(`Готово: docs/index.html — ${count} формул, ${(Buffer.byteLength(html) / 1024).toFixed(0)} КБ`);
+fs.writeFileSync(path.join(ROOT, 'index.html'), html);
+console.log(`Готово: index.html — ${count} формул, ${(Buffer.byteLength(html) / 1024).toFixed(0)} КБ`);
