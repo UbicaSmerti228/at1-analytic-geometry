@@ -1,0 +1,14 @@
+{
+  "name": "at1-analytic-geometry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Подготовка к АТ №1 «Аналитическая геометрия»: теория, рисунки, 3D-поверхности, разбор пробника, тренировочный вариант и чек-лист",
+  "homepage": "https://ubicasmerti228.github.io/at1-analytic-geometry/",
+  "scripts": {
+    "build": "node src/build.js",
+    "check": "python3 tools/check_answers.py"
+  },
+  "dependencies": {
+    "katex": "^0.16.11"
+  }
+}
