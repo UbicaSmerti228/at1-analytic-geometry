@@ -6,6 +6,8 @@
 
 ### [Открыть сайт →](https://ubicasmerti228.github.io/at1-analytic-geometry/)
 
+**[Тренажёр на 22 балла →](https://ubicasmerti228.github.io/at1-analytic-geometry/trener/)** · **[Разбор вариантов II–IV и прогноз I, V, VI →](https://ubicasmerti228.github.io/at1-analytic-geometry/varianty/)**
+
 ![задач в билете: 10](https://img.shields.io/badge/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87_%D0%B2_%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%B5-10-1D5BA3)
 ![баллов: 30](https://img.shields.io/badge/%D0%B1%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2-30-BB3826)
 ![теория: 20 вопросов](https://img.shields.io/badge/%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F-20_%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-28774A)

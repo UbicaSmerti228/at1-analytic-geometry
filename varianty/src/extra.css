@@ -1,0 +1,52 @@
+/* Страница вариантов: блоки «вариант → условие → решение» */
+.task-sec { padding-block: 46px 6px; border-bottom: 1px dashed var(--line); }
+.task-sec > h2 .no { color: var(--red); font-size: 1.15em; margin-right: .25em; }
+.task-sec > h2 .pts { display: inline-block; vertical-align: middle; margin-left: .3em; font-family: var(--f-mono); font-size: .8rem; font-weight: 400; color: var(--soft); border: 1px solid var(--line); border-radius: 3px; padding: 1px 6px; }
+.var { border: 1px solid var(--line); border-radius: 4px; background: var(--sheet); margin: 14px 0; }
+.var-h { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 12px 14px; }
+.vtag { font-family: var(--f-disp); font-weight: 700; font-size: .78rem; letter-spacing: .06em; color: var(--sheet); background: var(--ink); border-radius: 3px; padding: 2px 7px; white-space: nowrap; margin-top: 3px; }
+.var-h .cond { font-weight: 600; min-width: 0; overflow-x: auto; }
+details.sol { border-top: 1px dashed var(--line); }
+details.sol > summary { cursor: pointer; list-style: none; padding: 9px 14px; font-family: var(--f-disp); font-weight: 700; font-size: .9rem; color: var(--blue); display: flex; justify-content: space-between; gap: 10px; }
+details.sol > summary::-webkit-details-marker { display: none; }
+details.sol > summary::after { content: "+"; font-size: 1.1rem; line-height: 1; }
+details.sol[open] > summary::after { content: "−"; }
+details.sol > div { padding: 0 14px 12px; overflow-x: auto; }
+.how { background: var(--blue-bg); border-radius: 4px; padding: 12px 16px; margin: 1.1em 0; }
+.how > b:first-child { font-family: var(--f-disp); color: var(--blue); display: block; margin-bottom: 2px; }
+.how ol, .how ul { margin: .4em 0; padding-left: 1.3em; }
+.how li { margin: .3em 0; }
+.prio { counter-reset: p; list-style: none; padding: 0; margin: 1em 0; display: grid; gap: 8px; }
+.prio li { display: grid; grid-template-columns: 28px 1fr; gap: 2px 10px; align-items: baseline; background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; }
+.prio li::before { counter-increment: p; content: counter(p); font-family: var(--f-disp); font-weight: 700; color: var(--red); font-size: 1.15rem; }
+.prio li > span { min-width: 0; }
+.prio li > em { grid-column: 2; font-style: normal; font-family: var(--f-mono); font-size: .8rem; color: var(--soft); white-space: nowrap; }
+@media (min-width: 640px) { .prio li { grid-template-columns: 34px 1fr auto; } .prio li > em { grid-column: auto; } }
+.answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px; margin: 1.2em 0; }
+.answers .card ol { margin: .3em 0 0; padding-left: 1.6em; }
+.answers .card li { margin: .35em 0; font-size: .95rem; }
+.answers .card h4 { font-size: 1.05rem; }
+.minis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 12px; margin: 1.2em 0; }
+.minis .card p { margin: .3em 0; font-size: .96rem; }
+.minis .card h4 { display: flex; gap: 8px; }
+.minis .card h4 i { font-style: normal; color: var(--red); }
+.note { font-size: .93rem; color: var(--soft); }
+
+.legend > span.lg-none::before { content: none; }
+.secs { list-style: none; padding: 0; margin: 1em 0; display: grid; gap: 8px; }
+.secs li { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.secs li b { font-family: var(--f-disp); }
+.selfq { margin: .45em 0 0; font-size: .93rem; }
+details.bigv { border: 1.5px solid var(--ink); border-radius: 4px; background: var(--sheet); margin: 14px 0; }
+details.bigv > summary { cursor: pointer; list-style: none; padding: 12px 16px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+details.bigv > summary::-webkit-details-marker { display: none; }
+details.bigv > summary b { font-family: var(--f-disp); font-size: 1.15rem; }
+details.bigv > summary span { font-family: var(--f-mono); font-size: .8rem; color: var(--soft); white-space: nowrap; }
+details.bigv[open] > summary { border-bottom: 1px dashed var(--line); }
+details.bigv > .bigv-b { padding: 4px 12px 12px; }
+details.bigv .var { background: var(--paper); }
+.cat { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 12px; margin: 1.2em 0; }
+.cat .card h4 { display: flex; justify-content: space-between; gap: 8px; }
+.cat .card h4 small { font-family: var(--f-mono); font-weight: 400; color: var(--soft); }
+.cat .card p { margin: .35em 0; font-size: .94rem; }
+.cat .card p b { font-family: var(--f-disp); font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; color: var(--soft); }

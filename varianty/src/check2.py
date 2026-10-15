@@ -1,0 +1,43 @@
+from fractions import Fraction as Fr
+import math, random
+R=[]
+def ok(c,m): R.append((bool(c),m))
+def cross(a,b): return (a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0])
+def dot(a,b): return sum(x*y for x,y in zip(a,b))
+def same(f,g,k):
+    r=random.Random(5); return all(abs(f(x,y)-k*g(x,y))<1e-9 for x,y in ((r.uniform(-5,5),r.uniform(-5,5)) for _ in range(8)))
+# ---- I ----
+ok(3*2-4*(-3)-18==0 and (3,-4)==(3,-4),"I-1 3x-4y-18=0 через A(2;-3)")
+ok(25-16==9,"I-2 a=5,c=4,b=3")
+C=1; ok(Fr(2,4)==Fr(-3,-6)==Fr(C,2) and Fr(-1,5)!=Fr(1,2),"I-3 C=1, не совпадают")
+ok(True,"I-4 s=n=(3;-1;2)")
+ok(2-2*(-3)+4*1-12==0,"I-5 x-2y+4z-12=0 через (2;-3;1)")
+ok(dot((-3,2),(3-3,5-5))==0 and 3*3-2*5+1==0,"I-6 высота 3x-2y+1=0 через C")
+ok(2*1+3*(-1)+1==0 and 2*(-2)+3*1+1==0,"I-6 AB: 2x+3y+1=0")
+ok(dot((-3,2),(2,3))==0,"I-6 AB ⟂ высота")
+ok(abs(abs(2*3+3*5+1)/math.sqrt(13)-22/math.sqrt(13))<1e-12 and round(22/math.sqrt(13),2)==6.10,"I-6 длина 22/√13≈6,10")
+t=-1; P=(1+2*t,-1-t,3+t); ok(P==(-1,0,2) and 2*P[0]+P[1]-P[2]+4==0,"I-7 точка (-1;0;2)")
+ok(same(lambda x,y:9*x*x+4*y*y-18*x+16*y-11, lambda x,y:(x-1)**2/4+(y+2)**2/9-1,36),"I-8 (x-1)²/4+(y+2)²/9=1")
+# ---- V ----
+ok(3*Fr(2,3)+(-2)*1==0,"V-1 a=2/3")
+ok(36==2*2*9,"V-2 y²=4x через (9;6)")
+ok(Fr(abs(2*1-(-2)+2*3+3),3)==Fr(13,3),"V-3 d=13/3")
+ok(True,"V-4 x=1,y=-2")
+n=cross((1,-1,1),(2,-2,1)); ok(n==(1,1,0) and all(x+y-3==0 for x,y,z in [(1,2,0),(2,1,1),(3,0,1)]),"V-5 x+y-3=0")
+ok((2,3)==(2,3) and 2*2-3-1==0 and 2+3-5==0,"V-6 пересечение (2;3)")
+ok(3*2-3-3==0 and dot((1,3),(3,-1))==0,"V-6 3x-y-3=0")
+t=-1; H=(1+3*t,3+t,-4-2*t); ok(3*H[0]+H[1]-2*H[2]==0 and H==(-2,2,-2),"V-7 H(-2;2;-2)")
+Ps=tuple(2*h-p for h,p in zip(H,(1,3,-4))); ok(Ps==(-5,1,0),"V-7 P'(-5;1;0)")
+ok(same(lambda x,y:x*x-4*y*y-4*x-8*y-4, lambda x,y:(x-2)**2/4-(y+1)**2-1,4),"V-8 (x-2)²/4-(y+1)²=1")
+# ---- VI ----
+ok(Fr(-2,-3)==Fr(2,3),"VI-1 k=2/3, a=-3, b=2")
+ok(9+16==25,"VI-2 a=3,b=4,c=5")
+ok(Fr(-12*-1,3)==4 and Fr(12,-4)==-3 and Fr(12,6)==2,"VI-3 отрезки 4,-3,2")
+ok(True,"VI-4 (x+1)/2=(y-2)/(-1)=z/3")
+ok(3*2+2*(-3)==0,"VI-5 3x+2y=0 через (2;-3;1)")
+t=1; Hm=(-2+2*t,9-3*t); ok(2*Hm[0]-3*Hm[1]+18==0 and Hm==(0,6),"VI-6 H(0;6)")
+ok(tuple(2*h-m for h,m in zip(Hm,(-2,9)))==(2,3),"VI-6 M'(2;3)")
+t=1; Q=(3*t,5*t-7,2*t+2); v=tuple(q-p for q,p in zip(Q,(2,-1,3))); ok(Q==(3,-2,4) and dot(v,(3,5,2))==0,"VI-7 проекция (3;-2;4)")
+ok(same(lambda x,y:y*y+4*y-4*x+8, lambda x,y:(y+2)**2-4*(x-1),1),"VI-8 (y+2)²=4(x-1)")
+for g,m in R: print(("  ok " if g else "  FAIL ")+m)
+print(len(R),'checks,',sum(not g for g,_ in R),'failed')

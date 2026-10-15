@@ -1,0 +1,894 @@
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">УГНТУ · Математика · АТ №1 · 2025–2026</p>
+    <h1>Варианты <span>II, III, IV</span> — разбор за один день</h1>
+    <p class="lead">Все варианты устроены одинаково: под каждым номером стоит задача одного и того же типа. Поэтому учим не 30 задач, а 10 приёмов. Иди по маршруту ниже шаг за шагом, а вечером реши пробный вариант из прогноза — как настоящую контрольную.</p>
+    <div class="stats">
+      <div><b>10</b><span>приёмов выучить</span></div>
+      <div><b>30</b><span>задач вариантов II–IV</span></div>
+      <div><b>30</b><span>задач прогноза I, V, VI</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Оглавление">
+  <ol>
+    <li><a href="#plan">План</a></li>
+    <li><a href="#min">Минимум</a></li>
+    <li><a href="#t1"><b>1</b>Прямая</a></li>
+    <li><a href="#t2"><b>2</b>Кривая</a></li>
+    <li><a href="#t3"><b>3</b>Плоскость</a></li>
+    <li><a href="#t4"><b>4</b>Прямая 3D</a></li>
+    <li><a href="#t5"><b>5</b>Плоскость</a></li>
+    <li><a href="#t6"><b>6</b>Плоскость B</a></li>
+    <li><a href="#t7"><b>7</b>Пространство B</a></li>
+    <li><a href="#t8"><b>8</b>Построить</a></li>
+    <li><a href="#t9"><b>9</b>Поверхность</a></li>
+    <li><a href="#t10"><b>10</b>Теория</a></li>
+    <li><a href="#answers">Ответы</a></li>
+    <li><a href="#prognoz">Прогноз I·V·VI</a></li>
+    <li><a href="#check">Чек-лист</a></li>
+  </ol>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ ПЛАН ============ -->
+<section class="block" id="plan">
+  <p class="eyebrow">С чего начать</p>
+  <h2>План на сегодня</h2>
+  <p class="intro">Задачи 1–5 стоят по 2 балла, задачи 6–10 — по 4. Маршрут ниже рассчитан примерно на 5 часов с перерывами. После каждого шага ответь на вопрос «Проверь себя»: получилось — иди дальше, нет — перечитай метод ещё раз.</p>
+  <ol class="route">
+    <li data-n="1"><div><b>Минимум с нуля</b> <span class="tag">20 мин</span><br><a href="#min">9 фактов</a>: вектор, середина, скалярное произведение, нормаль, направляющий, полный квадрат.<p class="selfq"><b>Проверь себя:</b> какой нормальный вектор у плоскости $2x - y + 3z - 5 = 0$? <span class="muted">Ответ: $(2;-1;3)$.</span></p></div></li>
+    <li data-n="2"><div><b>№9 и №5</b> <span class="tag">35 мин · 6 б.</span><br>Цилиндр по пропавшей переменной и плоскость, перпендикулярная прямой.<p class="selfq"><b>Проверь себя:</b> что за поверхность $x^2 + y^2 = 4$? <span class="muted">Ответ: круговой цилиндр, образующие $\parallel Oz$.</span></p></div></li>
+    <li data-n="3"><div><b>№8</b> <span class="tag">45 мин · 4 б.</span><br>Выделение полного квадрата и рисунок. В прогнозе есть ещё гипербола и парабола — посмотри и их.<p class="selfq"><b>Проверь себя:</b> $x^2 - 6x$ = ? <span class="muted">Ответ: $(x-3)^2 - 9$.</span></p></div></li>
+    <li data-n="4"><div><b>№2 и №10</b> <span class="tag">1 ч · 6 б.</span><br>Формулы $a$, $b$, $c$, $e$ и выводы уравнений прямой — вопросы 1–6 из списка (с прогнозом).<p class="selfq"><b>Проверь себя:</b> у гиперболы $c^2 = a^2 \,?\, b^2$ — плюс или минус? <span class="muted">Ответ: плюс.</span></p></div></li>
+    <li data-n="—"><div><b>Перерыв</b> <span class="tag">20 мин</span><br>Без телефона. Мозгу нужно время, чтобы уложить выученное.</div></li>
+    <li data-n="5"><div><b>№1, №3, №4</b> <span class="tag">40 мин · 6 б.</span><br>Короткие вопросы про прямую и плоскость.<p class="selfq"><b>Проверь себя:</b> когда плоскости перпендикулярны? <span class="muted">Ответ: когда скалярное произведение нормалей равно 0.</span></p></div></li>
+    <li data-n="6"><div><b>№6 и №7</b> <span class="tag">1 ч · 8 б.</span><br>Задачи уровня B. Если устал — пропусти, это самое сложное.</div></li>
+    <li data-n="7"><div><b>Вечер: пробная контрольная</b> <span class="tag">80 мин</span><br>Открой <a href="#prognoz">прогноз</a>, выбери один вариант (I, V или VI) и реши его на бумаге без подсказок. Потом открой решения и разбери ошибки.</div></li>
+  </ol>
+  <div class="idea"><b>Если времени совсем мало (2 часа):</b> шаги 1–3 и №10. Это до 14 баллов из 30, и эти задачи меньше всего меняются от варианта к варианту.</div>
+  <div class="how"><b>Как не терять баллы на АТ</b>
+    <ul>
+      <li>Сначала пиши формулу, потом подставляй числа. Так видно, что метод верный, даже если ошибёшься в арифметике.</li>
+      <li>Делай проверку: подставь точку в полученное уравнение. Это 20 секунд.</li>
+      <li>В задачах «построить» нужен рисунок: центр, оси, вершины, всё подписано.</li>
+      <li>Не знаешь, как довести до конца — запиши всё, что знаешь: нормаль, направляющий вектор, нужную формулу.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ МИНИМУМ ============ -->
+<section class="block" id="min">
+  <p class="eyebrow">С нуля · 20 минут</p>
+  <h2>Минимум, без которого никак</h2>
+  <p>Эти 9 фактов нужны почти в каждой задаче. Прочитай и попробуй пересказать своими словами.</p>
+  <div class="minis">
+    <div class="card"><h4><i>1</i>Вектор по двум точкам</h4><p>«Конец минус начало»:</p>$$\overline{AB} = (x_B - x_A;\ y_B - y_A;\ z_B - z_A)$$<p>Пример: $A(2;5;1)$, $B(3;2;1)$ → $\overline{AB} = (1;-3;0)$.</p></div>
+    <div class="card"><h4><i>2</i>Середина отрезка</h4>$$\left(\frac{x_A + x_B}{2};\ \frac{y_A + y_B}{2}\right)$$<p>Пример: $A(-3;2)$, $B(1;4)$ → середина $(-1;3)$.</p></div>
+    <div class="card"><h4><i>3</i>Скалярное произведение</h4>$$\vec a\cdot\vec b = x_1x_2 + y_1y_2 + z_1z_2$$<p>Равно нулю ⇔ векторы <b>перпендикулярны</b>. Длина $|\vec a| = \sqrt{x^2 + y^2 + z^2}$. Угол:</p>$$\cos\varphi = \frac{|\vec a\cdot\vec b|}{|\vec a|\,|\vec b|}$$</div>
+    <div class="card"><h4><i>4</i>Коэффициенты = нормаль</h4><p>В уравнениях $Ax + By + C = 0$ (прямая) и $Ax + By + Cz + D = 0$ (плоскость) вектор из коэффициентов $\vec n = (A;B;C)$ <b>перпендикулярен</b> прямой или плоскости.</p><p>Пример: $5x + y - 3z - 3 = 0$ → $\vec n = (5;1;-3)$.</p></div>
+    <div class="card"><h4><i>5</i>Знаменатели = направление</h4>$$\frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p}$$<p>$\vec s = (m;n;p)$ идёт <b>вдоль</b> прямой. Точка $(x_0;y_0;z_0)$ — числа из числителей <b>с обратным знаком</b>: в $\frac{x+2}{3}$ стоит $x_0 = -2$.</p></div>
+    <div class="card"><h4><i>6</i>Угловой коэффициент</h4>$$y = kx + b,\qquad k = \operatorname{tg}\alpha$$<p>$\alpha$ — угол между прямой и осью $Ox$, $b$ — где прямая пересекает $Oy$.</p></div>
+    <div class="card"><h4><i>7</i>Полный квадрат</h4>$$x^2 + bx = \left(x + \frac b2\right)^2 - \frac{b^2}{4}$$<p>Пример: $x^2 - 6x = (x-3)^2 - 9$; $\ x^2 + 4x = (x+2)^2 - 4$.</p></div>
+    <div class="card"><h4><i>8</i>Эллипс и гипербола</h4><p>Эллипс: $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, $\ c^2 = a^2 - b^2$.</p><p>Гипербола: $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$, $\ c^2 = a^2 + b^2$.</p><p>Фокусы $(\pm c;0)$, эксцентриситет $e = \frac ca$. Оси $2a$ и $2b$ — значит, полуоси $a$ и $b$.</p></div>
+    <div class="card"><h4><i>9</i>Векторное произведение</h4><p>Даёт вектор, перпендикулярный двум данным:</p>$$\vec a\times\vec b = \begin{vmatrix} \vec i & \vec j & \vec k \\ x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \end{vmatrix}$$<p>$= \vec i\,(y_1z_2 - z_1y_2) - \vec j\,(x_1z_2 - z_1x_2) + \vec k\,(x_1y_2 - y_1x_2)$. Не забудь <b>минус</b> у $\vec j$. Проверка: результат скалярно на каждый вектор даёт 0.</p></div>
+  </div>
+</section>
+
+<!-- ============ №1 ============ -->
+<section class="task-sec" id="t1">
+  <p class="eyebrow">Прямая на плоскости</p>
+  <h2><span class="no">№1</span> Короткий вопрос про прямую <span class="pts">2 б.</span></h2>
+  <div class="how"><b>Что нужно знать</b>
+    <ul>
+      <li>$k = \operatorname{tg}\alpha$ — угол с положительным направлением $Ox$, от $0^\circ$ до $180^\circ$.</li>
+      <li>В $Ax + By + C = 0$: если $A = 0$, прямая горизонтальна ($\parallel Ox$, $\perp Oy$); если $B = 0$, вертикальна ($\parallel Oy$, $\perp Ox$).</li>
+      <li>Прямая через две точки: $\dfrac{x - x_1}{x_2 - x_1} = \dfrac{y - y_1}{y_2 - y_1}$, затем «крест-накрест».</li>
+    </ul>
+  </div>
+
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Какой угол образует прямая $y = -x + 1$ с положительным направлением оси $Ox$?</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <p>Угловой коэффициент $k = -1$, и $k = \operatorname{tg}\alpha$. Значит, $\operatorname{tg}\alpha = -1$.</p>
+      <p>Угол с осью берут от $0^\circ$ до $180^\circ$, а тангенс отрицательный — угол тупой: $\alpha = 180^\circ - 45^\circ = 135^\circ$.</p>
+      <div class="ans">α = 135° (3π/4)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Написать уравнение прямой, проходящей через точку $M_0(2;0)$ и середину отрезка $A(-3;2)$, $B(1;4)$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>Середина $AB$: $C\left(\frac{-3+1}{2};\ \frac{2+4}{2}\right) = C(-1;3)$.</div></div>
+      <div class="step"><i>2</i><div>Прямая через $M_0(2;0)$ и $C(-1;3)$: $$\frac{x - 2}{-1 - 2} = \frac{y - 0}{3 - 0}\ \Rightarrow\ \frac{x-2}{-3} = \frac{y}{3}$$</div></div>
+      <div class="step"><i>3</i><div>Крест-накрест: $3(x - 2) = -3y \Rightarrow x - 2 = -y \Rightarrow x + y - 2 = 0$.</div></div>
+      <p class="chk-line">Проверка: $M_0$: $2 + 0 - 2 = 0$; $C$: $-1 + 3 - 2 = 0$.</p>
+      <div class="ans">x + y − 2 = 0</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">При каком значении $n$ прямая $4x + ny - 1 = 0$ перпендикулярна оси $Oy$?</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Прямая, перпендикулярная оси $Oy$, — горизонтальная ($y = \text{const}$). Для этого коэффициент при $x$ должен быть нулём. А он равен $4$, поэтому при буквальном прочтении <b>такого $n$ нет</b>.</p>
+      <p>Скорее всего, составитель ждёт $n = 0$: тогда уравнение $4x - 1 = 0$, то есть $x = \frac14$ — вертикальная прямая. Она перпендикулярна оси $Ox$ (и параллельна $Oy$), а её нормаль $(4;0)$ перпендикулярна оси $Oy$.</p>
+      <p class="note">На АТ напиши оба вывода: «⊥ Oy невозможно, т.к. A = 4 ≠ 0; при n = 0 прямая x = 1/4 ∥ Oy». Так ты покажешь, что понимаешь условие при любом прочтении.</p>
+      <div class="ans">n = 0 (прямая x = 1/4); строго ⊥ Oy — ни при каком n</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №2 ============ -->
+<section class="task-sec" id="t2">
+  <p class="eyebrow">Кривые второго порядка</p>
+  <h2><span class="no">№2</span> Гипербола или эллипс по числам <span class="pts">2 б.</span></h2>
+  <div class="how"><b>Метод</b>
+    <ol>
+      <li>Определи кривую: между квадратами <b>плюс</b> — эллипс, <b>минус</b> — гипербола.</li>
+      <li>Найди $a$ и $b$. Если дано «ось $2a = 16$» — дели на 2.</li>
+      <li>Связь с фокусом: эллипс $c^2 = a^2 - b^2$, гипербола $c^2 = a^2 + b^2$; эксцентриситет $e = \frac ca$, отсюда $c = e\cdot a$.</li>
+      <li>Фокусы на оси абсцисс симметрично — это $F(\pm c;\,0)$ и уравнение вида $\frac{x^2}{a^2} \pm \frac{y^2}{b^2} = 1$.</li>
+    </ol>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Составить уравнение гиперболы, фокусы которой расположены на оси абсцисс симметрично относительно начала координат, если ось $2a = 16$ и эксцентриситет $\varepsilon = \frac54$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <div class="step"><i>1</i><div>$2a = 16 \Rightarrow a = 8$.</div></div>
+      <div class="step"><i>2</i><div>$c = \varepsilon a = \frac54\cdot 8 = 10$.</div></div>
+      <div class="step"><i>3</i><div>Гипербола: $b^2 = c^2 - a^2 = 100 - 64 = 36$.</div></div>
+      <div class="ans">x²/64 − y²/36 = 1</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Найти координаты фокусов эллипса $9x^2 + 25y^2 = 225$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>Делим на 225, чтобы справа была 1: $\dfrac{x^2}{25} + \dfrac{y^2}{9} = 1$. Значит, $a = 5$, $b = 3$.</div></div>
+      <div class="step"><i>2</i><div>Эллипс: $c^2 = a^2 - b^2 = 25 - 9 = 16$, $c = 4$.</div></div>
+      <div class="ans">F₁(−4; 0), F₂(4; 0)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Составить уравнение гиперболы, фокусы которой расположены на оси абсцисс симметрично относительно начала координат, если её оси $2a = 10$ и $2b = 8$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>$a = 5$, $b = 4$, подставляем в $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$. (Если спросят фокусы: $c = \sqrt{25 + 16} = \sqrt{41}$.)</p>
+      <div class="ans">x²/25 − y²/16 = 1</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №3 ============ -->
+<section class="task-sec" id="t3">
+  <p class="eyebrow">Плоскость</p>
+  <h2><span class="no">№3</span> Вопрос про плоскость <span class="pts">2 б.</span></h2>
+  <div class="how"><b>Что нужно знать</b>
+    <ul>
+      <li>У плоскости $Ax + By + Cz + D = 0$ нормаль $\vec n = (A;B;C)$.</li>
+      <li>Плоскости <b>перпендикулярны</b> ⇔ $\vec n_1\cdot\vec n_2 = A_1A_2 + B_1B_2 + C_1C_2 = 0$.</li>
+      <li>Плоскости <b>параллельны</b> ⇔ нормали пропорциональны.</li>
+      <li>Координатные плоскости: $Oxy$ — это $z = 0$, $Oxz$ — это $y = 0$, $Oyz$ — это $x = 0$.</li>
+      <li>Плоскость через точку $M_0$ с нормалью $\vec n$: $A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$.</li>
+    </ul>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">При каком значении $A$ плоскости $5x + y - 3z - 3 = 0$ и $2x + Ay + 3z + 1 = 0$ перпендикулярны?</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <p>$\vec n_1 = (5;1;-3)$, $\vec n_2 = (2;A;3)$. Перпендикулярность: $\vec n_1\cdot\vec n_2 = 0$:</p>
+      $$5\cdot2 + 1\cdot A + (-3)\cdot3 = 0\ \Rightarrow\ 10 + A - 9 = 0\ \Rightarrow\ A = -1$$
+      <div class="ans">A = −1</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">В каком случае плоскость $Ax + By + Cz + D = 0$ параллельна плоскости $Oxz$?</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Плоскость $Oxz$ — это $y = 0$, её нормаль $(0;1;0)$. Параллельная плоскость имеет пропорциональную нормаль: $(A;B;C) \parallel (0;1;0)$, то есть $A = 0$, $C = 0$, $B \ne 0$.</p>
+      <p>Уравнение становится $By + D = 0$, то есть $y = -\frac DB$. При $D = 0$ плоскость совпадёт с $Oxz$, поэтому для параллельности нужно ещё $D \ne 0$.</p>
+      <div class="ans">A = 0 и C = 0 (B ≠ 0, D ≠ 0): плоскость y = −D/B</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Написать уравнение плоскости, точки которой одинаково удалены от точек $P(1;2;-3)$ и $Q(3;4;-1)$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Такая плоскость проходит через середину отрезка $PQ$ перпендикулярно ему.</p>
+      <div class="step"><i>1</i><div>Середина: $M\left(\frac{1+3}{2};\ \frac{2+4}{2};\ \frac{-3-1}{2}\right) = M(2;3;-2)$.</div></div>
+      <div class="step"><i>2</i><div>Нормаль: $\overline{PQ} = (2;2;2)$, можно взять короче $\vec n = (1;1;1)$.</div></div>
+      <div class="step"><i>3</i><div>$1(x - 2) + 1(y - 3) + 1(z + 2) = 0 \Rightarrow x + y + z - 3 = 0$.</div></div>
+      <p class="chk-line">Проверка: точка $(3;0;0)$ лежит в плоскости; до $P$: $4+4+9 = 17$, до $Q$: $0+16+1 = 17$ (квадраты расстояний равны).</p>
+      <div class="ans">x + y + z − 3 = 0</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №4 ============ -->
+<section class="task-sec" id="t4">
+  <p class="eyebrow">Прямая в пространстве</p>
+  <h2><span class="no">№4</span> Уравнение прямой в пространстве <span class="pts">2 б.</span></h2>
+  <div class="how"><b>Метод</b>
+    <ul>
+      <li>Нужны точка $(x_0;y_0;z_0)$ и направляющий вектор $\vec s = (m;n;p)$.</li>
+      <li>Каноническое: $\dfrac{x - x_0}{m} = \dfrac{y - y_0}{n} = \dfrac{z - z_0}{p}$. Параметрическое: $x = x_0 + mt$, $y = y_0 + nt$, $z = z_0 + pt$.</li>
+      <li>Через две точки: $\vec s = \overline{AB}$. Параллельная прямая — тот же $\vec s$.</li>
+      <li>Ноль в знаменателе — не ошибка: он значит, что эта координата не меняется.</li>
+    </ul>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Составить канонические уравнения прямой, проходящей через точки $A(2;5;1)$ и $B(3;2;1)$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <div class="step"><i>1</i><div>$\vec s = \overline{AB} = (3 - 2;\ 2 - 5;\ 1 - 1) = (1;\,-3;\,0)$.</div></div>
+      <div class="step"><i>2</i><div>Точка $A$: $$\frac{x - 2}{1} = \frac{y - 5}{-3} = \frac{z - 1}{0}$$</div></div>
+      <p>Ноль под $z$ значит $z - 1 = 0$: вся прямая лежит в плоскости $z = 1$.</p>
+      <div class="ans">(x − 2)/1 = (y − 5)/(−3) = (z − 1)/0</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Составить параметрические уравнения прямой, проходящей через начало координат параллельно прямой $\frac{x-2}{2} = \frac{y+5}{3} = \frac{z-1}{1}$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Параллельные прямые имеют один направляющий вектор — знаменатели: $\vec s = (2;3;1)$. Точка — $O(0;0;0)$.</p>
+      <div class="ans">x = 2t, y = 3t, z = t</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Определить значения параметров $m$, $n$, $p$, при которых прямая $\frac{x - x_0}{m} = \frac{y - y_0}{n} = \frac{z - z_0}{p}$ параллельна оси $Ox$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Прямая $\parallel Ox$ ⇔ её направляющий $\vec s = (m;n;p)$ коллинеарен орту оси $\vec i = (1;0;0)$. Значит, $n = 0$, $p = 0$, а $m$ — любое, кроме нуля.</p>
+      <p>Тогда $y = y_0$ и $z = z_0$ постоянны, меняется только $x$.</p>
+      <div class="ans">n = 0, p = 0, m ≠ 0</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №5 ============ -->
+<section class="task-sec" id="t5">
+  <p class="eyebrow">Плоскость через точку</p>
+  <h2><span class="no">№5</span> Плоскость через точку и прямую <span class="pts">2 б.</span></h2>
+  <div class="how"><b>Метод</b>
+    <ul>
+      <li><b>Плоскость ⊥ прямой:</b> направляющий прямой и есть нормаль плоскости, $\vec n = \vec s$ (знаменатели). Дальше $A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$.</li>
+      <li><b>Плоскость через точку $P$ и прямую:</b> в плоскости лежат два вектора — $\vec s$ прямой и вектор от $P$ до точки прямой. Уравнение — определитель из трёх строк равен нулю (как плоскость через три точки).</li>
+    </ul>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Найти уравнение плоскости, проходящей через точку $(1;2;-1)$ перпендикулярно прямой $\frac{x-3}{1} = \frac{y-2}{-3} = \frac{z+1}{4}$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <div class="step"><i>1</i><div>$\vec n = \vec s = (1;-3;4)$.</div></div>
+      <div class="step"><i>2</i><div>$1(x - 1) - 3(y - 2) + 4(z + 1) = 0 \Rightarrow x - 1 - 3y + 6 + 4z + 4 = 0$.</div></div>
+      <p class="chk-line">Проверка: $1 - 6 - 4 + 9 = 0$.</p>
+      <div class="ans">x − 3y + 4z + 9 = 0</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Составить уравнение плоскости, проходящей через точку $M_0(1;-2;1)$ перпендикулярно прямой $\frac{x+2}{3} = \frac{y}{-2} = \frac{z+5}{4}$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>$\vec n = \vec s = (3;-2;4)$.</div></div>
+      <div class="step"><i>2</i><div>$3(x - 1) - 2(y + 2) + 4(z - 1) = 0 \Rightarrow 3x - 3 - 2y - 4 + 4z - 4 = 0$.</div></div>
+      <p class="chk-line">Проверка: $3 + 4 + 4 - 11 = 0$.</p>
+      <div class="ans">3x − 2y + 4z − 11 = 0</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Составить уравнение плоскости, проходящей через точку $P(1;1;-2)$ и прямую $\frac{x-1}{2} = \frac{y-3}{1} = \frac{z}{5}$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>С прямой берём точку $M_1(1;3;0)$ и направляющий $\vec s = (2;1;5)$. Вектор $\overline{PM_1} = (0;2;2)$.</div></div>
+      <div class="step"><i>2</i><div>Точка $M(x;y;z)$ лежит в плоскости, если векторы $\overline{PM}$, $\vec s$, $\overline{PM_1}$ в одной плоскости: $$\begin{vmatrix} x - 1 & y - 1 & z + 2 \\ 2 & 1 & 5 \\ 0 & 2 & 2 \end{vmatrix} = 0$$</div></div>
+      <div class="step"><i>3</i><div>Раскладываем по первой строке: $$\begin{gathered} (x-1)(2 - 10) - (y-1)(4 - 0) \ + \\ + \ (z+2)(4 - 0) = 0 \end{gathered}$$ $$\begin{gathered} -8(x-1) - 4(y-1) \ + \\ + \ 4(z+2) = 0 \end{gathered}$$ Делим на $-4$: $2(x-1) + (y-1) - (z+2) = 0$.</div></div>
+      <p class="chk-line">Проверка: $P$: $2 + 1 + 2 - 5 = 0$; $M_1$: $2 + 3 - 0 - 5 = 0$.</p>
+      <div class="ans">2x + y − z − 5 = 0</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №6 ============ -->
+<section class="task-sec" id="t6">
+  <p class="eyebrow">Плоскость, уровень B</p>
+  <h2><span class="no">№6</span> Прямые и треугольник на плоскости <span class="pts">4 б.</span></h2>
+  <div class="how"><b>Что нужно знать</b>
+    <ul>
+      <li>Угол между прямыми через угловые коэффициенты: $\operatorname{tg}\varphi = \left|\dfrac{k_2 - k_1}{1 + k_1k_2}\right|$.</li>
+      <li>Прямая через точку с коэффициентом $k$: $y - y_0 = k(x - x_0)$.</li>
+      <li>Медиана идёт из вершины в середину противоположной стороны.</li>
+      <li>Точка пересечения медиан $O$ — среднее арифметическое вершин: $x_O = \frac{x_A + x_B + x_C}{3}$, $y_O = \frac{y_A + y_B + y_C}{3}$.</li>
+      <li>Угол между векторами: $\cos\varphi = \frac{|\vec a\cdot\vec b|}{|\vec a|\,|\vec b|}$.</li>
+    </ul>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Даны две вершины треугольника $A(2;2)$, $B(3;0)$ и точка пересечения его медиан $O(3;1)$. Найти третью вершину $C$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <p>Точка пересечения медиан — среднее арифметическое вершин:</p>
+      $$3 = \frac{2 + 3 + x_C}{3},\qquad 1 = \frac{2 + 0 + y_C}{3}$$
+      <p>$x_C = 9 - 5 = 4$, $\ y_C = 3 - 2 = 1$.</p>
+      <p class="chk-line">Проверка: $\frac{2+3+4}{3} = 3$, $\frac{2+0+1}{3} = 1$.</p>
+      {{fig:t6iii|Все три медианы (пунктир) сходятся в O(3; 1)}}
+      <div class="ans">C(4; 1)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Найти угол между стороной $AB$ и медианой $AM$ треугольника $ABC$, если $A(4;2)$, $B(2;1)$, $C(3;0)$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>$M$ — середина $BC$: $M\left(\frac{2+3}{2};\ \frac{1+0}{2}\right) = M(2{,}5;\ 0{,}5)$.</div></div>
+      <div class="step"><i>2</i><div>Векторы из $A$: $\overline{AB} = (-2;-1)$, $\ \overline{AM} = (-1{,}5;-1{,}5)$, он параллелен $(1;1)$.</div></div>
+      <div class="step"><i>3</i><div>$$\cos\varphi = \frac{|(-2)\cdot1 + (-1)\cdot1|}{\sqrt{4+1}\cdot\sqrt{1+1}} =$$ $$= \frac{3}{\sqrt{10}} \approx 0{,}949$$</div></div>
+      <p>Через угловые коэффициенты: $k_{AB} = \frac{1-2}{2-4} = \frac12$, $\ k_{AM} = \frac{0{,}5 - 2}{2{,}5 - 4} = 1$, $\ \operatorname{tg}\varphi = \left|\frac{1 - \frac12}{1 + \frac12}\right| = \frac13$. Тот же угол.</p>
+      {{fig:t6ii|Сторона AB (красная), медиана AM (синяя)}}
+      <div class="ans">φ = arccos(3/√10) = arctg(1/3) ≈ 18,4°</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Составить уравнение прямой, проходящей через точку $M(1;1)$ под углом $45^\circ$ к прямой $y = 3x + 1$. Рассмотреть все возможные случаи.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>У данной прямой $k_1 = 3$, искомую обозначим $y - 1 = k(x - 1)$. $\operatorname{tg}45^\circ = 1$: $$\left|\frac{k - 3}{1 + 3k}\right| = 1$$</div></div>
+      <div class="step"><i>2</i><div>Модуль раскрывается двумя способами — это и есть «все случаи»:<br>
+        $\frac{k-3}{1+3k} = 1 \Rightarrow k - 3 = 1 + 3k \Rightarrow k = -2$;<br>
+        $\frac{k-3}{1+3k} = -1 \Rightarrow k - 3 = -1 - 3k \Rightarrow k = \frac12$.</div></div>
+      <div class="step"><i>3</i><div>$k = -2$: $y - 1 = -2(x - 1) \Rightarrow y = -2x + 3$.<br>$k = \frac12$: $y - 1 = \frac12(x - 1) \Rightarrow y = \frac12x + \frac12$, или $x - 2y + 1 = 0$.</div></div>
+      <p class="chk-line">Проверка: $\left|\frac{-2-3}{1-6}\right| = 1$ и $\left|\frac{0{,}5-3}{1+1{,}5}\right| = 1$.</p>
+      {{fig:t6iv|Обе прямые проходят через M и образуют 45° с прямой y = 3x + 1}}
+      <div class="ans">y = −2x + 3 и y = x/2 + 1/2</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №7 ============ -->
+<section class="task-sec" id="t7">
+  <p class="eyebrow">Пространство, уровень B</p>
+  <h2><span class="no">№7</span> Прямая, плоскость и точка в пространстве <span class="pts">4 б.</span></h2>
+  <div class="how"><b>Три приёма</b>
+    <ul>
+      <li><b>Прямая из двух плоскостей:</b> $\vec s = \vec n_1\times\vec n_2$; точку находим, положив одну координату равной нулю. Если вышли дроби — попробуй занулить другую.</li>
+      <li><b>Проекция точки на плоскость:</b> провести через точку прямую по нормали ($x = x_0 + At$, …), подставить в плоскость, найти $t$, затем точку.</li>
+      <li><b>Расстояние от точки до прямой:</b> найти на прямой ближайшую точку — вектор от данной точки к ней перпендикулярен $\vec s$.</li>
+    </ul>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Найти проекцию точки $A(2;3;1)$ на плоскость $x - y + z + 3 = 0$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <div class="step"><i>1</i><div>Нормаль $\vec n = (1;-1;1)$. Прямая через $A$ по нормали: $x = 2 + t$, $y = 3 - t$, $z = 1 + t$.</div></div>
+      <div class="step"><i>2</i><div>Подставляем в плоскость: $(2 + t) - (3 - t) + (1 + t) + 3 = 0 \Rightarrow 3t + 3 = 0 \Rightarrow t = -1$.</div></div>
+      <div class="step"><i>3</i><div>Точка: $x = 1$, $y = 4$, $z = 0$.</div></div>
+      <p class="chk-line">Проверка: $1 - 4 + 0 + 3 = 0$ — точка лежит в плоскости.</p>
+      <div class="ans">(1; 4; 0)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Составить каноническое уравнение прямой, заданной пересечением плоскостей $\begin{cases} 2x + 2y + z = 0 \\ 3x - y + 2z - 1 = 0 \end{cases}$</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>$\vec n_1 = (2;2;1)$, $\vec n_2 = (3;-1;2)$: $$\vec s = \begin{vmatrix} \vec i & \vec j & \vec k \\ 2 & 2 & 1 \\ 3 & -1 & 2 \end{vmatrix}$$ $= \vec i\,(4 + 1) - \vec j\,(4 - 3) + \vec k\,(-2 - 6) = (5;\,-1;\,-8)$.</div></div>
+      <div class="step"><i>2</i><div>Точка. При $z = 0$ получаются дроби, поэтому возьмём $y = 0$: $2x + z = 0$ и $3x + 2z = 1$. Из первого $z = -2x$, тогда $3x - 4x = 1$, $x = -1$, $z = 2$. Точка $(-1;0;2)$.</div></div>
+      <div class="step"><i>3</i><div>$$\frac{x + 1}{5} = \frac{y}{-1} = \frac{z - 2}{-8}$$</div></div>
+      <p class="chk-line">Проверка: $(5;-1;-8)\cdot(2;2;1) = 10 - 2 - 8 = 0$, $\ (5;-1;-8)\cdot(3;-1;2) = 15 + 1 - 16 = 0$; точка: $-2 + 0 + 2 = 0$, $-3 - 0 + 4 - 1 = 0$.</p>
+      <div class="ans">(x + 1)/5 = y/(−1) = (z − 2)/(−8)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Вычислить расстояние $d$ от точки $P(1;-1;-2)$ до прямой $x = t + 1$, $y = 2t + 5$, $z = 2t - 3$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>Направляющий $\vec s = (1;2;2)$ — коэффициенты при $t$. Точка прямой: $M(t + 1;\ 2t + 5;\ 2t - 3)$, вектор $\overline{PM} = (t;\ 2t + 6;\ 2t - 1)$.</div></div>
+      <div class="step"><i>2</i><div>Кратчайший отрезок перпендикулярен прямой: $\overline{PM}\cdot\vec s = 0$: $$t + 2(2t + 6) + 2(2t - 1) = 0\ \Rightarrow\ 9t + 10 = 0\ \Rightarrow\ t = -\frac{10}{9}$$</div></div>
+      <div class="step"><i>3</i><div>$\overline{PM} = \left(-\frac{10}{9};\ \frac{34}{9};\ -\frac{29}{9}\right)$: $$d = \frac{\sqrt{100 + 1156 + 841}}{9} =$$ $$= \frac{\sqrt{2097}}{9} =$$ $$= \frac{\sqrt{233}}{3} \approx 5{,}09$$</div></div>
+      <p><b>Второй способ — формулой:</b> $d = \dfrac{|\overline{M_0P}\times\vec s|}{|\vec s|}$, где $M_0(1;5;-3)$ при $t = 0$. $\overline{M_0P} = (0;-6;1)$, $\ \overline{M_0P}\times\vec s = (-14;\,1;\,6)$, $\ d = \frac{\sqrt{196 + 1 + 36}}{3} = \frac{\sqrt{233}}{3}$.</p>
+      <div class="ans">d = √233 / 3 ≈ 5,09</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №8 ============ -->
+<section class="task-sec" id="t8">
+  <p class="eyebrow">Кривая второго порядка</p>
+  <h2><span class="no">№8</span> Построить кривую <span class="pts">4 б.</span></h2>
+  <p>Во всех трёх вариантах получается <b>эллипс со смещённым центром</b>. Алгоритм один и тот же.</p>
+  <div class="how"><b>Алгоритм</b>
+    <ol>
+      <li>Сгруппируй слагаемые с $x$ и с $y$, вынеси коэффициент при квадрате за скобку.</li>
+      <li>Внутри скобки выдели полный квадрат: $x^2 + bx = \left(x + \frac b2\right)^2 - \frac{b^2}{4}$.</li>
+      <li>Раскрой внешние скобки (не забудь умножить «хвост» на вынесенное число), числа перенеси вправо.</li>
+      <li>Раздели на правую часть, чтобы справа была 1.</li>
+      <li>Прочитай: центр $(x_0;y_0)$ — числа из скобок с обратным знаком; под $(x - x_0)^2$ стоит квадрат горизонтальной полуоси, под $(y - y_0)^2$ — вертикальной.</li>
+      <li><b>Рисунок:</b> отметь центр, проведи через него пунктиром новые оси, отложи полуоси влево-вправо и вверх-вниз (4 вершины), соедини плавным овалом, отметь фокусы.</li>
+    </ol>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Построить кривую $16x^2 + 25y^2 + 32x - 100y - 284 = 0$.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <div class="step"><i>1</i><div>$16(x^2 + 2x) + 25(y^2 - 4y) - 284 = 0$</div></div>
+      <div class="step"><i>2</i><div>$16\big[(x+1)^2 - 1\big] + 25\big[(y-2)^2 - 4\big] - 284 = 0$</div></div>
+      <div class="step"><i>3</i><div>$16(x+1)^2 - 16 + 25(y-2)^2 - 100 - 284 = 0 \Rightarrow 16(x+1)^2 + 25(y-2)^2 = 400$</div></div>
+      <div class="step"><i>4</i><div>Делим на 400: $$\frac{(x+1)^2}{25} + \frac{(y-2)^2}{16} = 1$$</div></div>
+      <p>Эллипс: центр $O'(-1;2)$, $a = 5$ (по горизонтали), $b = 4$ (по вертикали), $c = \sqrt{25 - 16} = 3$, $e = \frac35 = 0{,}6$. Вершины $(-6;2)$, $(4;2)$, $(-1;6)$, $(-1;-2)$, фокусы $(-4;2)$ и $(2;2)$.</p>
+      {{fig:t8ii|(x + 1)²/25 + (y − 2)²/16 = 1}}
+      <div class="ans">эллипс (x + 1)²/25 + (y − 2)²/16 = 1, центр (−1; 2)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Построить кривую $2x^2 - 8x + y^2 - 6y + 1 = 0$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>$2(x^2 - 4x) + (y^2 - 6y) + 1 = 0$</div></div>
+      <div class="step"><i>2</i><div>$2\big[(x-2)^2 - 4\big] + \big[(y-3)^2 - 9\big] + 1 = 0$</div></div>
+      <div class="step"><i>3</i><div>$2(x-2)^2 - 8 + (y-3)^2 - 9 + 1 = 0 \Rightarrow 2(x-2)^2 + (y-3)^2 = 16$</div></div>
+      <div class="step"><i>4</i><div>Делим на 16: $$\frac{(x-2)^2}{8} + \frac{(y-3)^2}{16} = 1$$</div></div>
+      <p>Эллипс: центр $O'(2;3)$. Под $y$ число больше, поэтому эллипс <b>вытянут вертикально</b>: вертикальная полуось $4$, горизонтальная $\sqrt8 = 2\sqrt2 \approx 2{,}83$. $c = \sqrt{16 - 8} = 2\sqrt2$, фокусы $(2;\ 3 \pm 2\sqrt2)$, $e = \frac{2\sqrt2}{4} = \frac{\sqrt2}{2} \approx 0{,}71$. Вершины $(2;7)$, $(2;-1)$, $(2 \pm 2\sqrt2;\ 3)$.</p>
+      {{fig:t8iii|(x − 2)²/8 + (y − 3)²/16 = 1}}
+      <div class="ans">эллипс (x − 2)²/8 + (y − 3)²/16 = 1, центр (2; 3)</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Построить кривую $x^2 + 4x + 4y^2 = 0$.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <div class="step"><i>1</i><div>$(x^2 + 4x) + 4y^2 = 0 \Rightarrow (x+2)^2 - 4 + 4y^2 = 0$</div></div>
+      <div class="step"><i>2</i><div>$(x+2)^2 + 4y^2 = 4$, делим на 4: $$\frac{(x+2)^2}{4} + \frac{y^2}{1} = 1$$</div></div>
+      <p>Эллипс: центр $O'(-2;0)$, $a = 2$, $b = 1$, $c = \sqrt{4 - 1} = \sqrt3 \approx 1{,}73$, $e = \frac{\sqrt3}{2} \approx 0{,}87$. Вершины $(-4;0)$, $(0;0)$, $(-2;\pm1)$, фокусы $(-2 \pm \sqrt3;\ 0)$. Эллипс проходит через начало координат — свободного члена в уравнении нет.</p>
+      {{fig:t8iv|(x + 2)²/4 + y² = 1}}
+      <div class="ans">эллипс (x + 2)²/4 + y² = 1, центр (−2; 0)</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №9 ============ -->
+<section class="task-sec" id="t9">
+  <p class="eyebrow">Поверхность второго порядка</p>
+  <h2><span class="no">№9</span> Построить поверхность и найти сечения <span class="pts">4 б.</span></h2>
+  <p>Во всех трёх вариантах в уравнении <b>нет одной переменной</b> — значит, это <b>цилиндр</b>.</p>
+  <div class="how"><b>Правило и план ответа</b>
+    <ol>
+      <li>Нет переменной → цилиндрическая поверхность, образующие (прямые) параллельны оси этой переменной.</li>
+      <li>Кривая из уравнения — направляющая. По её виду название: гипербола → гиперболический цилиндр, парабола → параболический, эллипс → эллиптический.</li>
+      <li>Сечения координатными плоскостями: по очереди подставь $x = 0$, $y = 0$, $z = 0$ и назови, что получилось (кривая, пара прямых, одна прямая или «нет пересечения»).</li>
+      <li><b>Рисунок на бумаге:</b> нарисуй кривую в её координатной плоскости, нарисуй такую же кривую, сдвинутую вдоль оси отсутствующей переменной, и соедини их параллельными прямыми.</li>
+    </ol>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Построить поверхность $z^2 - y^2 = 1$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+    <details class="sol" open><summary>Решение</summary><div>
+      <p>Нет $x$ → цилиндр с образующими $\parallel Ox$. В плоскости $yOz$ кривая $z^2 - y^2 = 1$ — гипербола. Поверхность — <b>гиперболический цилиндр</b>.</p>
+      <ul class="secs">
+        <li><b>$x = 0$ (плоскость $yOz$)</b>: $z^2 - y^2 = 1$ → гипербола, ветви вверх и вниз, вершины $(0;0;\pm1)$</li>
+        <li><b>$y = 0$ (плоскость $xOz$)</b>: $z^2 = 1$, $z = \pm1$ → две параллельные прямые $\parallel Ox$</li>
+        <li><b>$z = 0$ (плоскость $xOy$)</b>: $-y^2 = 1$ → решений нет — поверхность не пересекает $xOy$</li>
+      </ul>
+      <div class="lab">
+        <div class="viewer" data-viewer="v4" data-surface="hcylX"><canvas aria-label="Гиперболический цилиндр z² − y² = 1"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+        <div class="legend"><span class="lg-red"><em>$x = 0$: гипербола</em></span><span class="lg-green"><em>$y = 0$: прямые $z = \pm1$</em></span><span class="lg-none"><em>$z = 0$: нет пересечения</em></span></div>
+      </div>
+      {{fig:t9iv|Направляющая в плоскости yOz: гипербола z² − y² = 1, асимптоты z = ±y}}
+      <div class="ans">гиперболический цилиндр, образующие ∥ Ox</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Построить поверхность $z^2 - x^2 = 1$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Нет $y$ → цилиндр с образующими $\parallel Oy$. В плоскости $xOz$ кривая $z^2 - x^2 = 1$ — гипербола. Поверхность — <b>гиперболический цилиндр</b>.</p>
+      <ul class="secs">
+        <li><b>$y = 0$ (плоскость $xOz$)</b>: $z^2 - x^2 = 1$ → гипербола, ветви вверх и вниз, вершины $(0;0;\pm1)$</li>
+        <li><b>$x = 0$ (плоскость $yOz$)</b>: $z^2 = 1$, $z = \pm1$ → две параллельные прямые $\parallel Oy$</li>
+        <li><b>$z = 0$ (плоскость $xOy$)</b>: $-x^2 = 1$ → решений нет — не пересекает</li>
+      </ul>
+      <div class="lab">
+        <div class="viewer" data-viewer="v3" data-surface="hcylY"><canvas aria-label="Гиперболический цилиндр z² − x² = 1"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+        <div class="legend"><span class="lg-red"><em>$y = 0$: гипербола</em></span><span class="lg-green"><em>$x = 0$: прямые $z = \pm1$</em></span><span class="lg-none"><em>$z = 0$: нет пересечения</em></span></div>
+      </div>
+      {{fig:t9iii|Направляющая в плоскости xOz: гипербола z² − x² = 1}}
+      <div class="ans">гиперболический цилиндр, образующие ∥ Oy</div>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Построить поверхность $x = y^2$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+    <details class="sol"><summary>Сначала реши сам · открыть решение</summary><div>
+      <p>Нет $z$ → цилиндр с образующими $\parallel Oz$. В плоскости $xOy$ кривая $x = y^2$ — парабола. Поверхность — <b>параболический цилиндр</b>.</p>
+      <ul class="secs">
+        <li><b>$z = 0$ (плоскость $xOy$)</b>: $x = y^2$ → парабола, вершина $O$, ветви вдоль $+Ox$</li>
+        <li><b>$y = 0$ (плоскость $xOz$)</b>: $x = 0$ → прямая — ось $Oz$</li>
+        <li><b>$x = 0$ (плоскость $yOz$)</b>: $y^2 = 0$, $y = 0$ → прямая — ось $Oz$ (поверхность касается $yOz$)</li>
+      </ul>
+      <div class="lab">
+        <div class="viewer" data-viewer="v2" data-surface="pcylZ"><canvas aria-label="Параболический цилиндр x = y²"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+        <div class="legend"><span class="lg-red"><em>$z = 0$: парабола $x = y^2$</em></span><span class="lg-amber"><em>$x = 0$ и $y = 0$: ось $Oz$</em></span></div>
+      </div>
+      {{fig:t9ii|Направляющая в плоскости xOy: парабола x = y²}}
+      <div class="ans">параболический цилиндр, образующие ∥ Oz</div>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ №10 ============ -->
+<section class="task-sec" id="t10">
+  <p class="eyebrow">Теория</p>
+  <h2><span class="no">№10</span> Вывод уравнения прямой <span class="pts">4 б.</span></h2>
+  <p>Номер вопроса в №10 совпадает с номером варианта: вар. II — вопрос 2 из списка теории, III — вопрос 3, IV — вопрос 4. Это самая надёжная закономерность: в варианте I, скорее всего, будет вопрос 1, в V — вопрос 5, в VI — вопрос 6. Ниже ответы на все шесть — каждый примерно на 5 строк.</p>
+  <div class="how"><b>Как оформить ответ</b>
+    <ol>
+      <li><b>Дано</b> — что известно о прямой.</li>
+      <li><b>Рисунок</b> — прямая, точки, вектор, всё подписано.</li>
+      <li><b>Идея</b> — одно предложение: какое условие выполняется для любой точки прямой.</li>
+      <li><b>Вывод</b> — запись этого условия в координатах.</li>
+      <li><b>Итог в рамке</b> и короткий пример.</li>
+    </ol>
+  </div>
+
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. II</span><span class="cond">Вывод уравнения прямой на плоскости, заданной точкой и направляющим вектором.</span></div>
+    <details class="sol" open><summary>Ответ</summary><div>
+      <p><b>Дано:</b> точка $M_0(x_0;y_0)$ и ненулевой вектор $\vec s = (m;n)$, параллельный прямой (направляющий вектор).</p>
+      {{fig:q2|M лежит на прямой ⇔ M₀M ∥ s}}
+      <p><b>Идея:</b> возьмём произвольную точку $M(x;y)$ прямой. Вектор $\overline{M_0M}$ лежит на прямой, поэтому он коллинеарен $\vec s$.</p>
+      <p><b>Вывод:</b> $\overline{M_0M} = (x - x_0;\ y - y_0)$. У коллинеарных векторов координаты пропорциональны:</p>
+      <div class="key" data-k="каноническое уравнение">$$\frac{x - x_0}{m} = \frac{y - y_0}{n}$$</div>
+      <p>Обозначив общее значение отношений через $t$, получим параметрические уравнения: $x = x_0 + mt$, $y = y_0 + nt$, $t \in \mathbb R$.</p>
+      <p><b>Пример:</b> $M_0(1;2)$, $\vec s = (3;1)$: $\frac{x - 1}{3} = \frac{y - 2}{1}$, то есть $x - 3y + 5 = 0$.</p>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. III</span><span class="cond">Вывод уравнения прямой на плоскости, заданной точкой и нормальным вектором.</span></div>
+    <details class="sol"><summary>Сначала вспомни сам · открыть ответ</summary><div>
+      <p><b>Дано:</b> точка $M_0(x_0;y_0)$ и ненулевой вектор $\vec n = (A;B)$, перпендикулярный прямой (нормальный вектор).</p>
+      {{fig:q3|M лежит на прямой ⇔ M₀M ⟂ n}}
+      <p><b>Идея:</b> для любой точки $M(x;y)$ прямой вектор $\overline{M_0M}$ лежит на прямой, поэтому он перпендикулярен $\vec n$, и их скалярное произведение равно нулю.</p>
+      <p><b>Вывод:</b> $\vec n\cdot\overline{M_0M} = 0$, где $\overline{M_0M} = (x - x_0;\ y - y_0)$:</p>
+      <div class="key" data-k="уравнение прямой">$$A(x - x_0) + B(y - y_0) = 0$$</div>
+      <p>Раскрыв скобки и обозначив $C = -Ax_0 - By_0$, получаем общее уравнение $Ax + By + C = 0$. Вывод: в общем уравнении коэффициенты при $x$ и $y$ — координаты нормального вектора.</p>
+      <p><b>Пример:</b> $M_0(2;-1)$, $\vec n = (3;4)$: $3(x - 2) + 4(y + 1) = 0$, то есть $3x + 4y - 2 = 0$.</p>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. IV</span><span class="cond">Вывод уравнения прямой с угловым коэффициентом и точкой.</span></div>
+    <details class="sol"><summary>Сначала вспомни сам · открыть ответ</summary><div>
+      <p><b>Дано:</b> точка $M_0(x_0;y_0)$ и угловой коэффициент $k = \operatorname{tg}\alpha$, где $\alpha$ — угол наклона прямой к положительному направлению оси $Ox$.</p>
+      {{fig:q4|Угол при M₀ равен α (как соответственные углы при параллельных прямых)}}
+      <p><b>Идея:</b> возьмём на прямой другую точку $M(x;y)$ и построим прямоугольный треугольник с катетами $x - x_0$ (по горизонтали) и $y - y_0$ (по вертикали). Угол при вершине $M_0$ равен $\alpha$.</p>
+      <p><b>Вывод:</b> тангенс — отношение противолежащего катета к прилежащему:</p>
+      $$\operatorname{tg}\alpha = \frac{y - y_0}{x - x_0}\ \Rightarrow\ k = \frac{y - y_0}{x - x_0}$$
+      <div class="key" data-k="уравнение прямой">$$y - y_0 = k(x - x_0)$$</div>
+      <p>Частный случай: если $M_0 = (0;b)$ — точка на оси $Oy$, получаем $y = kx + b$. Вертикальная прямая ($\alpha = 90^\circ$) углового коэффициента не имеет.</p>
+      <p><b>Пример:</b> $M_0(1;3)$, $k = 2$: $y - 3 = 2(x - 1)$, то есть $y = 2x + 1$.</p>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. I?</span><span class="cond">Вопрос 1. Вывод уравнения прямой на плоскости, заданной двумя точками.</span></div>
+    <details class="sol"><summary>Сначала вспомни сам · открыть ответ</summary><div>
+      <p><b>Дано:</b> две различные точки $M_1(x_1;y_1)$ и $M_2(x_2;y_2)$.</p>
+      {{fig:q1|M₁M ∥ M₁M₂}}
+      <p><b>Идея:</b> для любой точки $M(x;y)$ прямой векторы $\overline{M_1M}$ и $\overline{M_1M_2}$ лежат на одной прямой, то есть коллинеарны.</p>
+      <p><b>Вывод:</b> $\overline{M_1M} = (x - x_1;\ y - y_1)$, $\ \overline{M_1M_2} = (x_2 - x_1;\ y_2 - y_1)$. Координаты коллинеарных векторов пропорциональны:</p>
+      <div class="key" data-k="уравнение прямой">$$\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}$$</div>
+      <p>Если $x_2 = x_1$, прямая вертикальна: $x = x_1$ (аналогично для $y$).</p>
+      <p><b>Пример:</b> $A(2;3)$, $B(1;5)$: $\frac{x-2}{-1} = \frac{y-3}{2}$, то есть $2x + y - 7 = 0$.</p>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. V?</span><span class="cond">Вопрос 5. Исследование общего уравнения прямой при различных значениях $A$, $B$, $C$.</span></div>
+    <details class="sol"><summary>Сначала вспомни сам · открыть ответ</summary><div>
+      <p><b>Дано:</b> общее уравнение прямой $Ax + By + C = 0$, где $A$ и $B$ одновременно не равны нулю. Вектор $\vec n = (A;B)$ — нормаль к прямой.</p>
+      <p><b>Идея:</b> смотрим, какие коэффициенты равны нулю, и что это значит для положения прямой.</p>
+      <ul class="secs">
+        <li><b>$C = 0$</b>: $Ax + By = 0$ — точка $(0;0)$ удовлетворяет уравнению, прямая проходит через начало координат.</li>
+        <li><b>$A = 0$</b>: $By + C = 0$, то есть $y = -\frac CB$ — прямая параллельна оси $Ox$ (нормаль $(0;B)$ вертикальна).</li>
+        <li><b>$B = 0$</b>: $x = -\frac CA$ — прямая параллельна оси $Oy$.</li>
+        <li><b>$A = C = 0$</b>: $y = 0$ — сама ось $Ox$.</li>
+        <li><b>$B = C = 0$</b>: $x = 0$ — сама ось $Oy$.</li>
+        <li><b>$A, B, C \ne 0$</b>: переносим $C$ и делим на $-C$: $$\frac{x}{-C/A} + \frac{y}{-C/B} = 1$$ Это уравнение в отрезках: прямая отсекает на осях $a = -\frac CA$ и $b = -\frac CB$.</li>
+      </ul>
+      <p><b>Пример:</b> $2x - 3y + 6 = 0$: все коэффициенты не нули, делим на $-6$: $\frac{x}{-3} + \frac y2 = 1$ — отрезки $-3$ и $2$.</p>
+    </div></details>
+  </div>
+  <div class="var">
+    <div class="var-h"><span class="vtag">Вар. VI?</span><span class="cond">Вопрос 6. Взаимное расположение двух прямых, заданных общими уравнениями.</span></div>
+    <details class="sol"><summary>Сначала вспомни сам · открыть ответ</summary><div>
+      <p><b>Дано:</b> $l_1:\ A_1x + B_1y + C_1 = 0$ и $l_2:\ A_2x + B_2y + C_2 = 0$, нормали $\vec n_1 = (A_1;B_1)$, $\vec n_2 = (A_2;B_2)$.</p>
+      <p><b>Идея:</b> общие точки прямых — решения системы из двух уравнений. Сколько решений, так прямые и расположены.</p>
+      <ul class="secs">
+        <li><b>Пересекаются</b> (одно решение): $\frac{A_1}{A_2} \ne \frac{B_1}{B_2}$ — нормали не коллинеарны.</li>
+        <li><b>Параллельны</b> (нет решений): $\frac{A_1}{A_2} = \frac{B_1}{B_2} \ne \frac{C_1}{C_2}$.</li>
+        <li><b>Совпадают</b> (бесконечно много решений): $\frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2}$.</li>
+      </ul>
+      <p><b>Угол</b> между прямыми равен углу между нормалями:</p>
+      <div class="key" data-k="угол между прямыми">$$\cos\varphi = \frac{|A_1A_2 + B_1B_2|}{\sqrt{A_1^2 + B_1^2}\,\sqrt{A_2^2 + B_2^2}}$$</div>
+      <p><b>Перпендикулярны</b> ⇔ $A_1A_2 + B_1B_2 = 0$.</p>
+      <p><b>Пример:</b> $2x - y + 3 = 0$ и $x - 3y + 1 = 0$: $\frac21 \ne \frac{-1}{-3}$ — пересекаются; $\cos\varphi = \frac{|2 + 3|}{\sqrt5\cdot\sqrt{10}} = \frac{1}{\sqrt2}$, $\varphi = 45^\circ$.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ ОТВЕТЫ ============ -->
+<section class="block" id="answers">
+  <p class="eyebrow">Для самопроверки</p>
+  <h2>Ответы по вариантам</h2>
+  <p>Реши вариант на бумаге и сверься. Все ответы пересчитаны программой.</p>
+  <div class="answers">
+    <div class="card"><h4>Вариант II</h4><ol>
+      <li>$\alpha = 135^\circ$</li>
+      <li>$\frac{x^2}{64} - \frac{y^2}{36} = 1$</li>
+      <li>$x + y + z - 3 = 0$</li>
+      <li>$n = p = 0$, $m \ne 0$</li>
+      <li>$x - 3y + 4z + 9 = 0$</li>
+      <li>$\varphi = \operatorname{arctg}\frac13 \approx 18{,}4^\circ$</li>
+      <li>$\frac{x+1}{5} = \frac{y}{-1} = \frac{z-2}{-8}$</li>
+      <li>эллипс $\frac{(x+1)^2}{25} + \frac{(y-2)^2}{16} = 1$</li>
+      <li>параболический цилиндр $\parallel Oz$</li>
+      <li>вывод: точка и направляющий вектор</li>
+    </ol></div>
+    <div class="card"><h4>Вариант III</h4><ol>
+      <li>$x + y - 2 = 0$</li>
+      <li>$F(\pm4;\,0)$</li>
+      <li>$A = -1$</li>
+      <li>$x = 2t$, $y = 3t$, $z = t$</li>
+      <li>$2x + y - z - 5 = 0$</li>
+      <li>$C(4;\,1)$</li>
+      <li>$(1;\,4;\,0)$</li>
+      <li>эллипс $\frac{(x-2)^2}{8} + \frac{(y-3)^2}{16} = 1$</li>
+      <li>гиперболический цилиндр $\parallel Oy$</li>
+      <li>вывод: точка и нормальный вектор</li>
+    </ol></div>
+    <div class="card"><h4>Вариант IV</h4><ol>
+      <li>$n = 0$ (см. оговорку в решении)</li>
+      <li>$\frac{x^2}{25} - \frac{y^2}{16} = 1$</li>
+      <li>$A = C = 0$ ($B \ne 0$, $D \ne 0$)</li>
+      <li>$\frac{x-2}{1} = \frac{y-5}{-3} = \frac{z-1}{0}$</li>
+      <li>$3x - 2y + 4z - 11 = 0$</li>
+      <li>$y = -2x + 3$ и $y = \frac x2 + \frac12$</li>
+      <li>$d = \frac{\sqrt{233}}{3} \approx 5{,}09$</li>
+      <li>эллипс $\frac{(x+2)^2}{4} + y^2 = 1$</li>
+      <li>гиперболический цилиндр $\parallel Ox$</li>
+      <li>вывод: угловой коэффициент и точка</li>
+    </ol></div>
+  </div>
+  <p class="note">Подробная теория по всем темам АТ №1 — на сайте <a href="https://ubicasmerti228.github.io/at1-analytic-geometry/">ubicasmerti228.github.io/at1-analytic-geometry</a>.</p>
+</section>
+
+<!-- ============ ПРОГНОЗ ============ -->
+<section class="block" id="prognoz">
+  <p class="eyebrow">Прогноз · пробная контрольная на вечер</p>
+  <h2>Варианты I, V, VI: какими они, скорее всего, будут</h2>
+  <p class="intro">Настоящих задач этих вариантов я не знаю. Но по вариантам II, III, IV и пробнику видно, что под каждым номером повторяется один и тот же тип задачи. Ниже — что может попасться под каждым номером, и три пробных варианта, составленных по этим типам. Числа в них придуманы, но приёмы те же.</p>
+  <div class="idea"><b>Самое надёжное:</b> №10. Вариант II — вопрос 2 из списка теории, III — вопрос 3, IV — вопрос 4. Значит, I — вопрос 1, V — вопрос 5, VI — вопрос 6. Ответы на все шесть — в разделе <a href="#t10">№10</a>.</div>
+
+  <h3>Что может быть под каждым номером</h3>
+  <div class="cat">
+    <div class="card"><h4>№1 · прямая на плоскости <small>2 б.</small></h4>
+      <p><b>Было:</b> угол наклона прямой; прямая через точку и середину отрезка; параметр, при котором прямая ⊥ оси; прямая через две точки.</p>
+      <p><b>Может быть:</b> прямая через точку ∥ или ⊥ данной; параметр, при котором прямые ∥ или ⊥; угловой коэффициент и отрезки на осях.</p></div>
+    <div class="card"><h4>№2 · кривая по числам <small>2 б.</small></h4>
+      <p><b>Было:</b> гипербола по $2a$ и $e$; фокусы эллипса; гипербола по осям; эксцентриситет гиперболы.</p>
+      <p><b>Может быть:</b> эллипс по осям и фокусному расстоянию; парабола через точку; полуоси, фокусы и асимптоты гиперболы по уравнению.</p></div>
+    <div class="card"><h4>№3 · плоскость <small>2 б.</small></h4>
+      <p><b>Было:</b> плоскость, равноудалённая от двух точек; параметр для ⊥ плоскостей; когда плоскость ∥ координатной; расстояние от $O$ до плоскости.</p>
+      <p><b>Может быть:</b> параметр для ∥ плоскостей; расстояние от точки до плоскости; отрезки на осях.</p></div>
+    <div class="card"><h4>№4 · прямая в пространстве <small>2 б.</small></h4>
+      <p><b>Было:</b> через две точки; через начало координат ∥ данной прямой; когда прямая ∥ оси.</p>
+      <p><b>Может быть:</b> через точку ⊥ плоскости ($\vec s = \vec n$); через точку ∥ оси; через точку ∥ прямой, заданной параметрически.</p></div>
+    <div class="card"><h4>№5 · плоскость через точку <small>2 б.</small></h4>
+      <p><b>Было:</b> ⊥ прямой (дважды); через точку и прямую; угол прямая–плоскость (пробник).</p>
+      <p><b>Может быть:</b> через точку ∥ данной плоскости; через три точки; через ось и точку.</p></div>
+    <div class="card"><h4>№6 · плоскость, уровень B <small>4 б.</small></h4>
+      <p><b>Было:</b> угол сторона–медиана; вершина по точке пересечения медиан; прямая под 45° к данной; угол высота–медиана.</p>
+      <p><b>Может быть:</b> уравнение и длина высоты; прямая через точку пересечения двух прямых ⊥ третьей; точка, симметричная относительно прямой.</p></div>
+    <div class="card"><h4>№7 · пространство, уровень B <small>4 б.</small></h4>
+      <p><b>Было:</b> прямая из двух плоскостей (дважды); проекция точки на плоскость; расстояние от точки до прямой.</p>
+      <p><b>Может быть:</b> точка пересечения прямой и плоскости; точка, симметричная относительно плоскости; проекция точки на прямую.</p></div>
+    <div class="card"><h4>№8 · построить кривую <small>4 б.</small></h4>
+      <p><b>Было:</b> три эллипса и гипербола (пробник).</p>
+      <p><b>Может быть:</b> эллипс, гипербола или парабола. Алгоритм один — выделение полных квадратов.</p></div>
+    <div class="card"><h4>№9 · поверхность <small>4 б.</small></h4>
+      <p><b>Было:</b> только цилиндры — параболические и гиперболические.</p>
+      <p><b>Может быть:</b> другие цилиндры (круговой, вдоль другой оси). Реже — параболоид $z = x^2 + y^2$ или конус.</p></div>
+    <div class="card"><h4>№10 · теория <small>4 б.</small></h4>
+      <p><b>Было:</b> вопросы 2, 3, 4 из списка.</p>
+      <p><b>Прогноз:</b> I — вопрос 1, V — вопрос 5, VI — вопрос 6.</p></div>
+  </div>
+
+  <h3>Пробные варианты</h3>
+  <div class="how"><b>Как использовать</b>
+    <ol>
+      <li>Выбери один вариант. Возьми бумагу, засеки 80 минут.</li>
+      <li>Решай, не открывая решений. Застрял — переходи к следующей задаче.</li>
+      <li>Потом открой решения и сверься. Где ошибся — перечитай метод в разделе с этим номером.</li>
+    </ol>
+  </div>
+
+  <!-- ===== Вариант I ===== -->
+  <details class="bigv"><summary><b>Вариант I · прогноз</b><span>10 задач · 30 б.</span></summary><div class="bigv-b">
+    <div class="var"><div class="var-h"><span class="vtag">№1 · 2 б.</span><span class="cond">Составить уравнение прямой, проходящей через точку $A(2;-3)$ параллельно прямой $3x - 4y + 5 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>У параллельных прямых одна нормаль: $\vec n = (3;-4)$. Прямая через точку с нормалью:</p>
+        $$3(x - 2) - 4(y + 3) = 0\ \Rightarrow\ 3x - 4y - 18 = 0$$
+        <p class="chk-line">Проверка: $6 + 12 - 18 = 0$.</p>
+        <div class="ans">3x − 4y − 18 = 0</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№2 · 2 б.</span><span class="cond">Составить уравнение эллипса с фокусами на оси абсцисс, симметричными относительно начала координат, если большая ось равна 10, а расстояние между фокусами $2c = 8$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>$a = 5$, $c = 4$. Эллипс: $b^2 = a^2 - c^2 = 25 - 16 = 9$.</p>
+        <div class="ans">x²/25 + y²/9 = 1</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№3 · 2 б.</span><span class="cond">При каком значении $C$ плоскости $2x - 3y + Cz - 1 = 0$ и $4x - 6y + 2z + 5 = 0$ параллельны?</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Параллельные плоскости — нормали пропорциональны: $\frac24 = \frac{-3}{-6} = \frac C2$, отсюда $\frac C2 = \frac12$, $C = 1$.</p>
+        <p>Свободные члены $\frac{-1}{5} \ne \frac12$, поэтому плоскости не совпадают, а именно параллельны.</p>
+        <div class="ans">C = 1</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№4 · 2 б.</span><span class="cond">Составить параметрические уравнения прямой, проходящей через точку $M(2;-1;3)$ перпендикулярно плоскости $3x - y + 2z - 5 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Прямая ⊥ плоскости — её направляющий равен нормали плоскости: $\vec s = \vec n = (3;-1;2)$.</p>
+        <div class="ans">x = 2 + 3t, y = −1 − t, z = 3 + 2t</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№5 · 2 б.</span><span class="cond">Составить уравнение плоскости, проходящей через точку $M(2;-3;1)$ параллельно плоскости $x - 2y + 4z - 5 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Та же нормаль $\vec n = (1;-2;4)$: $(x - 2) - 2(y + 3) + 4(z - 1) = 0$.</p>
+        <p class="chk-line">Проверка: $2 + 6 + 4 - 12 = 0$.</p>
+        <div class="ans">x − 2y + 4z − 12 = 0</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№6 · 4 б.</span><span class="cond">Дан треугольник $A(1;-1)$, $B(-2;1)$, $C(3;5)$. Составить уравнение высоты, проведённой из вершины $C$, и найти её длину.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Высота из $C$ перпендикулярна $AB$, поэтому $\overline{AB} = (-3;2)$ — её нормаль: $$-3(x - 3) + 2(y - 5) = 0\ \Rightarrow\ 3x - 2y + 1 = 0$$</div></div>
+        <div class="step"><i>2</i><div>Прямая $AB$: $\frac{x-1}{-3} = \frac{y+1}{2} \Rightarrow 2x + 3y + 1 = 0$.</div></div>
+        <div class="step"><i>3</i><div>Длина высоты — расстояние от $C$ до $AB$: $$d = \frac{|2\cdot3 + 3\cdot5 + 1|}{\sqrt{4 + 9}} =$$ $$= \frac{22}{\sqrt{13}} \approx 6{,}10$$</div></div>
+        <div class="ans">3x − 2y + 1 = 0, длина 22/√13 ≈ 6,10</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№7 · 4 б.</span><span class="cond">Найти точку пересечения прямой $\frac{x-1}{2} = \frac{y+1}{-1} = \frac{z-3}{1}$ и плоскости $2x + y - z + 4 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Параметрически: $x = 1 + 2t$, $y = -1 - t$, $z = 3 + t$.</div></div>
+        <div class="step"><i>2</i><div>Подставляем в плоскость: $2(1 + 2t) + (-1 - t) - (3 + t) + 4 = 0 \Rightarrow 2t + 2 = 0 \Rightarrow t = -1$.</div></div>
+        <div class="step"><i>3</i><div>Точка: $x = -1$, $y = 0$, $z = 2$.</div></div>
+        <p class="chk-line">Проверка: $-2 + 0 - 2 + 4 = 0$.</p>
+        <div class="ans">(−1; 0; 2)</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№8 · 4 б.</span><span class="cond">Построить кривую $9x^2 + 4y^2 - 18x + 16y - 11 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>$9(x^2 - 2x) + 4(y^2 + 4y) - 11 = 0$</div></div>
+        <div class="step"><i>2</i><div>$9\big[(x-1)^2 - 1\big] + 4\big[(y+2)^2 - 4\big] - 11 = 0 \Rightarrow 9(x-1)^2 + 4(y+2)^2 = 36$</div></div>
+        <div class="step"><i>3</i><div>Делим на 36: $$\frac{(x-1)^2}{4} + \frac{(y+2)^2}{9} = 1$$</div></div>
+        <p>Эллипс, центр $O'(1;-2)$. Под $y$ больше, поэтому он вытянут вертикально: вертикальная полуось 3, горизонтальная 2. $c = \sqrt{9 - 4} = \sqrt5$, фокусы $(1;\ -2 \pm \sqrt5)$, $e = \frac{\sqrt5}{3} \approx 0{,}75$.</p>
+        {{fig:p8i|(x − 1)²/4 + (y + 2)²/9 = 1}}
+        <div class="ans">эллипс (x − 1)²/4 + (y + 2)²/9 = 1</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№9 · 4 б.</span><span class="cond">Построить поверхность $z = x^2$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Нет $y$ → <b>параболический цилиндр</b>, образующие $\parallel Oy$.</p>
+        <ul class="secs">
+          <li><b>$y = 0$ ($xOz$)</b>: $z = x^2$ → парабола, ветви вверх</li>
+          <li><b>$x = 0$ ($yOz$)</b>: $z = 0$ → прямая — ось $Oy$</li>
+          <li><b>$z = 0$ ($xOy$)</b>: $x^2 = 0$ → прямая — ось $Oy$ (поверхность касается $xOy$)</li>
+        </ul>
+        <div class="lab"><div class="viewer" data-viewer="p1" data-surface="pcylY"><canvas aria-label="Параболический цилиндр z = x²"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+          <div class="legend"><span class="lg-red"><em>$y = 0$: парабола</em></span><span class="lg-amber"><em>$x = 0$ и $z = 0$: ось $Oy$</em></span></div></div>
+        <div class="ans">параболический цилиндр, образующие ∥ Oy</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№10 · 4 б.</span><span class="cond">Вывод уравнения прямой на плоскости, заданной двумя точками.</span></div>
+      <details class="sol"><summary>Где ответ</summary><div><p>Полный ответ — в разделе <a href="#t10">№10</a>, блок «Вопрос 1».</p></div></details></div>
+  </div></details>
+
+  <!-- ===== Вариант V ===== -->
+  <details class="bigv"><summary><b>Вариант V · прогноз</b><span>10 задач · 30 б.</span></summary><div class="bigv-b">
+    <div class="var"><div class="var-h"><span class="vtag">№1 · 2 б.</span><span class="cond">При каком значении $a$ прямые $ax - 2y + 1 = 0$ и $3x + y - 4 = 0$ перпендикулярны?</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Нормали $(a;-2)$ и $(3;1)$. Перпендикулярность: $3a - 2 = 0$.</p>
+        <div class="ans">a = 2/3</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№2 · 2 б.</span><span class="cond">Составить уравнение параболы с вершиной в начале координат, симметричной относительно оси $Ox$ и проходящей через точку $A(9;6)$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Вид $y^2 = 2px$. Подставляем точку: $36 = 2p\cdot9$, $p = 2$. Фокус $\left(\frac p2;0\right) = (1;0)$, директриса $x = -1$.</p>
+        <div class="ans">y² = 4x</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№3 · 2 б.</span><span class="cond">Найти расстояние от точки $M(1;-2;3)$ до плоскости $2x - y + 2z + 3 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        $$d = \frac{|2\cdot1 - (-2) + 2\cdot3 + 3|}{\sqrt{4 + 1 + 4}} =$$ $$= \frac{13}{3} \approx 4{,}33$$
+        <div class="ans">d = 13/3</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№4 · 2 б.</span><span class="cond">Составить канонические уравнения прямой, проходящей через точку $M(1;-2;4)$ параллельно оси $Oz$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Направление оси $Oz$: $\vec s = (0;0;1)$. Нули в знаменателях значат, что $x = 1$ и $y = -2$ не меняются.</p>
+        <div class="ans">(x − 1)/0 = (y + 2)/0 = (z − 4)/1</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№5 · 2 б.</span><span class="cond">Составить уравнение плоскости, проходящей через точки $M_1(1;2;0)$, $M_2(2;1;1)$, $M_3(3;0;1)$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>$\overline{M_1M_2} = (1;-1;1)$, $\overline{M_1M_3} = (2;-2;1)$:</p>
+        $$\begin{vmatrix} x - 1 & y - 2 & z \\ 1 & -1 & 1 \\ 2 & -2 & 1 \end{vmatrix} = 0$$
+        <p>Раскладываем по первой строке: $(x-1)\cdot1 - (y-2)\cdot(-1) + z\cdot0 = 0$.</p>
+        <p>$(x - 1) + (y - 2) = 0$. В уравнении нет $z$ — плоскость параллельна оси $Oz$.</p>
+        <p class="chk-line">Проверка: $M_2$: $2 + 1 - 3 = 0$; $M_3$: $3 + 0 - 3 = 0$.</p>
+        <div class="ans">x + y − 3 = 0</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№6 · 4 б.</span><span class="cond">Составить уравнение прямой, проходящей через точку пересечения прямых $2x - y - 1 = 0$ и $x + y - 5 = 0$ перпендикулярно прямой $x + 3y - 3 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Точка пересечения: сложим уравнения, $3x - 6 = 0$, $x = 2$, $y = 3$.</div></div>
+        <div class="step"><i>2</i><div>Нормаль данной прямой $(1;3)$ — для искомой это направление. Значит, нормаль искомой $(3;-1)$.</div></div>
+        <div class="step"><i>3</i><div>$3(x - 2) - (y - 3) = 0 \Rightarrow 3x - y - 3 = 0$.</div></div>
+        <p class="chk-line">Проверка: точка $6 - 3 - 3 = 0$; перпендикулярность $(1;3)\cdot(3;-1) = 0$.</p>
+        <div class="ans">3x − y − 3 = 0</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№7 · 4 б.</span><span class="cond">Найти точку, симметричную точке $P(1;3;-4)$ относительно плоскости $3x + y - 2z = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Прямая через $P$ по нормали $(3;1;-2)$: $x = 1 + 3t$, $y = 3 + t$, $z = -4 - 2t$.</div></div>
+        <div class="step"><i>2</i><div>Подставляем в плоскость: $3(1 + 3t) + (3 + t) - 2(-4 - 2t) = 14t + 14 = 0$, $t = -1$. Проекция $H(-2;2;-2)$.</div></div>
+        <div class="step"><i>3</i><div>$H$ — середина $PP'$, поэтому $P' = 2H - P = (-4 - 1;\ 4 - 3;\ -4 + 4)$.</div></div>
+        <div class="ans">P′(−5; 1; 0)</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№8 · 4 б.</span><span class="cond">Построить кривую $x^2 - 4y^2 - 4x - 8y - 4 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>$(x^2 - 4x) - 4(y^2 + 2y) - 4 = 0$</div></div>
+        <div class="step"><i>2</i><div>$(x-2)^2 - 4 - 4\big[(y+1)^2 - 1\big] - 4 = 0 \Rightarrow (x-2)^2 - 4(y+1)^2 = 4$</div></div>
+        <div class="step"><i>3</i><div>Делим на 4: $$\frac{(x-2)^2}{4} - \frac{(y+1)^2}{1} = 1$$</div></div>
+        <p>Гипербола, центр $O'(2;-1)$, $a = 2$, $b = 1$, ветви влево-вправо. Вершины $(0;-1)$ и $(4;-1)$, $c = \sqrt{4 + 1} = \sqrt5$, $e = \frac{\sqrt5}{2}$. Асимптоты $y + 1 = \pm\frac12(x - 2)$ — диагонали прямоугольника $4\times2$ вокруг центра.</p>
+        {{fig:p8v|(x − 2)²/4 − (y + 1)² = 1}}
+        <div class="ans">гипербола (x − 2)²/4 − (y + 1)² = 1</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№9 · 4 б.</span><span class="cond">Построить поверхность $x^2 + y^2 = 4$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Нет $z$ → цилиндр с образующими $\parallel Oz$, направляющая — окружность радиуса 2. Поверхность — <b>круговой цилиндр</b>.</p>
+        <ul class="secs">
+          <li><b>$z = 0$ ($xOy$)</b>: $x^2 + y^2 = 4$ → окружность радиуса 2</li>
+          <li><b>$x = 0$ ($yOz$)</b>: $y = \pm2$ → две прямые $\parallel Oz$</li>
+          <li><b>$y = 0$ ($xOz$)</b>: $x = \pm2$ → две прямые $\parallel Oz$</li>
+        </ul>
+        <div class="lab"><div class="viewer" data-viewer="p5" data-surface="ccylZ"><canvas aria-label="Круговой цилиндр x² + y² = 4"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+          <div class="legend"><span class="lg-red"><em>$z = 0$: окружность</em></span><span class="lg-green"><em>$x = 0$: $y = \pm2$</em></span><span class="lg-amber"><em>$y = 0$: $x = \pm2$</em></span></div></div>
+        <div class="ans">круговой цилиндр радиуса 2, образующие ∥ Oz</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№10 · 4 б.</span><span class="cond">Исследование общего уравнения прямой при различных значениях $A$, $B$, $C$.</span></div>
+      <details class="sol"><summary>Где ответ</summary><div><p>Полный ответ — в разделе <a href="#t10">№10</a>, блок «Вопрос 5».</p></div></details></div>
+  </div></details>
+
+  <!-- ===== Вариант VI ===== -->
+  <details class="bigv"><summary><b>Вариант VI · прогноз</b><span>10 задач · 30 б.</span></summary><div class="bigv-b">
+    <div class="var"><div class="var-h"><span class="vtag">№1 · 2 б.</span><span class="cond">Найти угловой коэффициент прямой $2x - 3y + 6 = 0$ и отрезки, которые она отсекает на осях координат.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Выразим $y$: $y = \frac23x + 2$, значит $k = \frac23$.</p>
+        <p>Отрезки: $2x - 3y = -6$, делим на $-6$: $\frac{x}{-3} + \frac y2 = 1$.</p>
+        <div class="ans">k = 2/3; на Ox отрезок −3, на Oy отрезок 2</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№2 · 2 б.</span><span class="cond">Найти полуоси, фокусы, эксцентриситет и уравнения асимптот гиперболы $16x^2 - 9y^2 = 144$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Делим на 144: $\frac{x^2}{9} - \frac{y^2}{16} = 1$, $a = 3$, $b = 4$, $c = \sqrt{9 + 16} = 5$.</p>
+        <div class="ans">a = 3, b = 4, F(±5; 0), e = 5/3, асимптоты y = ±4x/3</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№3 · 2 б.</span><span class="cond">Найти отрезки, отсекаемые плоскостью $3x - 4y + 6z - 12 = 0$ на осях координат.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Переносим 12 и делим на 12: $\frac x4 + \frac{y}{-3} + \frac z2 = 1$ — это уравнение в отрезках.</p>
+        <div class="ans">a = 4, b = −3, c = 2</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№4 · 2 б.</span><span class="cond">Составить канонические уравнения прямой, проходящей через точку $A(-1;2;0)$ параллельно прямой $x = 2t + 1$, $y = -t$, $z = 3t - 2$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Направляющий — коэффициенты при $t$: $\vec s = (2;-1;3)$.</p>
+        <div class="ans">(x + 1)/2 = (y − 2)/(−1) = z/3</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№5 · 2 б.</span><span class="cond">Составить уравнение плоскости, проходящей через ось $Oz$ и точку $M(2;-3;1)$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Плоскость через ось $Oz$ содержит все точки $(0;0;z)$, поэтому $C = 0$ и $D = 0$: уравнение $Ax + By = 0$.</p>
+        <p>Подставляем $M$: $2A - 3B = 0$. Возьмём $A = 3$, $B = 2$.</p>
+        <div class="ans">3x + 2y = 0</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№6 · 4 б.</span><span class="cond">Найти точку, симметричную точке $M(-2;9)$ относительно прямой $2x - 3y + 18 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Прямая через $M$ по нормали $(2;-3)$: $x = -2 + 2t$, $y = 9 - 3t$.</div></div>
+        <div class="step"><i>2</i><div>Подставляем в данную прямую: $2(-2 + 2t) - 3(9 - 3t) + 18 = 13t - 13 = 0$, $t = 1$. Проекция $H(0;6)$.</div></div>
+        <div class="step"><i>3</i><div>$H$ — середина $MM'$: $M' = 2H - M = (0 + 2;\ 12 - 9)$.</div></div>
+        <div class="ans">M′(2; 3)</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№7 · 4 б.</span><span class="cond">Найти проекцию точки $P(2;-1;3)$ на прямую $x = 3t$, $y = 5t - 7$, $z = 2t + 2$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Точка прямой $M(3t;\ 5t - 7;\ 2t + 2)$, вектор $\overline{PM} = (3t - 2;\ 5t - 6;\ 2t - 1)$, направляющий $\vec s = (3;5;2)$.</div></div>
+        <div class="step"><i>2</i><div>Проекция — там, где $\overline{PM} \perp \vec s$: $$\begin{gathered} 3(3t - 2) + 5(5t - 6) \ + \\ + \ 2(2t - 1) = 0 \\ 38t - 38 = 0,\quad t = 1 \end{gathered}$$</div></div>
+        <div class="ans">(3; −2; 4)</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№8 · 4 б.</span><span class="cond">Построить кривую $y^2 + 4y - 4x + 8 = 0$.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <div class="step"><i>1</i><div>Квадрат только у $y$ — это парабола. $(y + 2)^2 - 4 - 4x + 8 = 0$.</div></div>
+        <div class="step"><i>2</i><div>$(y + 2)^2 = 4x - 4 = 4(x - 1)$.</div></div>
+        <p>Парабола с вершиной $O'(1;-2)$, ветви вправо. $2p = 4$, $p = 2$. Фокус на $\frac p2 = 1$ правее вершины: $F(2;-2)$; директриса на 1 левее: $x = 0$ — это ось $Oy$.</p>
+        {{fig:p8vi|(y + 2)² = 4(x − 1)}}
+        <div class="ans">парабола (y + 2)² = 4(x − 1), вершина (1; −2)</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№9 · 4 б.</span><span class="cond">Построить поверхность $y^2 - x^2 = 1$. Определить, какие кривые получаются при пересечении с координатными плоскостями.</span></div>
+      <details class="sol"><summary>Решение</summary><div>
+        <p>Нет $z$ → <b>гиперболический цилиндр</b>, образующие $\parallel Oz$.</p>
+        <ul class="secs">
+          <li><b>$z = 0$ ($xOy$)</b>: $y^2 - x^2 = 1$ → гипербола, ветви вдоль $Oy$, вершины $(0;\pm1;0)$</li>
+          <li><b>$x = 0$ ($yOz$)</b>: $y = \pm1$ → две прямые $\parallel Oz$</li>
+          <li><b>$y = 0$ ($xOz$)</b>: $-x^2 = 1$ → нет пересечения</li>
+        </ul>
+        <div class="lab"><div class="viewer" data-viewer="p6" data-surface="hcylZ"><canvas aria-label="Гиперболический цилиндр y² − x² = 1"></canvas><div class="hint"><span>Поверни пальцем</span><button type="button" class="spin">Пауза</button></div></div>
+          <div class="legend"><span class="lg-red"><em>$z = 0$: гипербола</em></span><span class="lg-green"><em>$x = 0$: прямые $y = \pm1$</em></span><span class="lg-none"><em>$y = 0$: нет пересечения</em></span></div></div>
+        <div class="ans">гиперболический цилиндр, образующие ∥ Oz</div></div></details></div>
+    <div class="var"><div class="var-h"><span class="vtag">№10 · 4 б.</span><span class="cond">Взаимное расположение двух прямых, заданных общими уравнениями.</span></div>
+      <details class="sol"><summary>Где ответ</summary><div><p>Полный ответ — в разделе <a href="#t10">№10</a>, блок «Вопрос 6».</p></div></details></div>
+  </div></details>
+  <p class="note">Все ответы прогнозных вариантов пересчитаны программой.</p>
+</section>
+
+<!-- ============ ЧЕК-ЛИСТ ============ -->
+<section class="block" id="check">
+  <p class="eyebrow">Готов к завтра?</p>
+  <h2>Чек-лист</h2>
+  <p class="intro">Отмечай, только если можешь сделать это сам на бумаге, без подсказок.</p>
+  <div class="progress"><div class="bar"><i id="ck-bar"></i></div><div class="ptext"><span id="ck-text">0 из 0</span><button type="button" id="ck-reset">Сбросить отметки</button></div></div>
+  <div class="cgroup"><h4>Задачи по 2 балла <small data-g="a"></small></h4>
+    <label class="citem"><input type="checkbox" id="k1" data-g="a"><span>№1: нахожу угол по $k$, пишу прямую через две точки, знаю, когда прямая $\parallel Ox$ или $\parallel Oy$</span></label>
+    <label class="citem"><input type="checkbox" id="k2" data-g="a"><span>№2: нахожу $a$, $b$, $c$, фокусы и пишу уравнение эллипса или гиперболы</span></label>
+    <label class="citem"><input type="checkbox" id="k3" data-g="a"><span>№3: проверяю перпендикулярность плоскостей, знаю особые случаи уравнения плоскости</span></label>
+    <label class="citem"><input type="checkbox" id="k4" data-g="a"><span>№4: пишу каноническое и параметрическое уравнения прямой в пространстве</span></label>
+    <label class="citem"><input type="checkbox" id="k5" data-g="a"><span>№5: пишу плоскость через точку перпендикулярно прямой (и через точку и прямую)</span></label>
+  </div>
+  <div class="cgroup"><h4>Задачи по 4 балла <small data-g="b"></small></h4>
+    <label class="citem"><input type="checkbox" id="k6" data-g="b"><span>№6: угол между прямыми через $k$, медиана, точка пересечения медиан</span></label>
+    <label class="citem"><input type="checkbox" id="k7" data-g="b"><span>№7: прямая из двух плоскостей, проекция точки на плоскость, расстояние до прямой</span></label>
+    <label class="citem"><input type="checkbox" id="k8" data-g="b"><span>№8: выделяю полные квадраты и рисую эллипс по центру и полуосям</span></label>
+    <label class="citem"><input type="checkbox" id="k9" data-g="b"><span>№9: узнаю цилиндр, называю его, нахожу сечения $x = 0$, $y = 0$, $z = 0$ и рисую</span></label>
+    <label class="citem"><input type="checkbox" id="k10" data-g="b"><span>№10: могу записать ответы на вопросы 1–6 из списка теории (выводы уравнений прямой) с рисунком</span></label>
+  </div>
+  <div class="cgroup"><h4>Финал <small data-g="c"></small></h4>
+    <label class="citem"><input type="checkbox" id="k11" data-g="c"><span>Решил пробный вариант (I, V или VI) сам за 80 минут и разобрал ошибки</span></label>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><p>Разбор вариантов II, III, IV аттестационного тестирования по математике (АТ №1, I семестр 2025–2026, УГНТУ). Удачи завтра!</p></div>
+</footer>
